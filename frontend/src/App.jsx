@@ -29,10 +29,11 @@ const toggleModal = () => {
       modal={setModal}
        />
         
-        {/* Conditionally render PhotoDetailsModal based on modal state */}
-      {modal && <PhotoDetailsModal />}
+        
+      {modal && <PhotoDetailsModal setModal={setModal}
+      modal={modal} />}
       
-      {/* Button to toggle modal state */}
+      
       <button onClick={toggleModal}>Toggle Modal</button>
       
     </div>
