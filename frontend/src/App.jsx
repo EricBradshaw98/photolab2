@@ -4,6 +4,7 @@ import photos from './mocks/photos';
 import HomeRoute from './routes/HomeRoute';
 import './App.scss';
 import { useState, useReducer } from "react";
+import PhotoDetailsModal from './routes/PhotoDetailsModal';
 
 const App = () => {
   
