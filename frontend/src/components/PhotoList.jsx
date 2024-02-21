@@ -54,6 +54,23 @@ const sampleDataForPhotoList = [
       profile: `${process.env.PUBLIC_URL}/profile-1.jpg`,
     },
   },
+  {
+    id: "3",
+    location: {
+      city: "Ottawa",
+      country: "Canada",
+    },
+    urls: {
+      full: `${process.env.PUBLIC_URL}/Image-3-Full.jpeg`,
+      regular: `${process.env.PUBLIC_URL}/Image-3-Regular.jpeg`,
+    },
+    user: {
+      id: "4",
+      username: "exampleuser",
+      name: "Joe Example",
+      profile: `${process.env.PUBLIC_URL}/profile-1.jpg`,
+    },
+  },
 ];
 
 
