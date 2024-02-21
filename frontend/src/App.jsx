@@ -4,6 +4,7 @@ import PhotoListItem from './components/PhotoListItem';
 import PhotoList from './components/PhotoList';
 import TopicList from './components/TopicList';
 import TopNavigationBar from './components/TopNavigationBar';
+import HomeRoute from './routes/HomeRoute';
 import './App.scss';
 
 // const sampleDataForPhotoListItem = {
