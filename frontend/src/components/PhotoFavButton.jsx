@@ -15,7 +15,7 @@ function PhotoFavButton(props) {
 
     if (favourites.includes(props.id)) { 
 
-      console.log("+++++++", favourites)
+      
       const index = favourites.indexOf(props.id);
       if (index > -1) { // only splice array when item is found
         favourites.splice(index, 1); // 2nd parameter means remove one item only
