@@ -9,29 +9,31 @@ import PhotoDetailsModal from './routes/PhotoDetailsModal';
 const App = () => {
   
 const [favouritePhotos, setFavouritePhotos] = useState([])
+const [modal, setModal] = useState(false);
 
 
-
-  
-
-
-  const [totalLikes, dispatch] = useReducer((totalLikes, amount) => {
-    
-    if (totalLikes) {
-      return (totalLikes + amount);
-    }
-  
-    
-  }, 0);
-   
-
+const toggleModal = () => {
+  setModal(!modal);
+};
   
   return (
     <div className="App">
       
       == {favouritePhotos.length}
-      <HomeRoute topics={topics} photos={photos} favouritePhotos={favouritePhotos} setFavouritePhotos={setFavouritePhotos} />
+      <HomeRoute 
+      topics={topics} 
+      photos={photos} 
+      favouritePhotos={favouritePhotos} 
+      setFavouritePhotos={setFavouritePhotos}
+      setModal={setModal}
+      modal={setModal}
+       />
         
+        {/* Conditionally render PhotoDetailsModal based on modal state */}
+      {modal && <PhotoDetailsModal />}
+      
+      {/* Button to toggle modal state */}
+      <button onClick={toggleModal}>Toggle Modal</button>
       
     </div>
   );
