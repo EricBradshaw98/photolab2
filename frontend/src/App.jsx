@@ -3,16 +3,33 @@ import topics from './mocks/topics';
 import photos from './mocks/photos';
 import HomeRoute from './routes/HomeRoute';
 import './App.scss';
-
+import { useState, useReducer } from "react";
 
 const App = () => {
+  
+const [favouritePhotos, setFavouritePhotos] = useState([])
 
+
+
+  
+
+
+  const [totalLikes, dispatch] = useReducer((totalLikes, amount) => {
+    
+    if (totalLikes) {
+      return (totalLikes + amount);
+    }
+  
+    
+  }, 0);
    
 
   
   return (
     <div className="App">
-      <HomeRoute topics={topics} photos={photos} />
+      
+      == {favouritePhotos.length}
+      <HomeRoute topics={topics} photos={photos} favouritePhotos={favouritePhotos} setFavouritePhotos={setFavouritePhotos} />
         
       
     </div>

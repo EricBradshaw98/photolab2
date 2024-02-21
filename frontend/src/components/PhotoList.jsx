@@ -79,6 +79,8 @@ const PhotoList = (props) => {
     <PhotoListItem
       key={photo.id}
       photo={photo}
+      favouritePhotos={props.favouritePhotos} 
+      setFavouritePhotos={props.setFavouritePhotos}
     />
   ));
 

@@ -12,7 +12,7 @@ console.log(props)
 
   return (
     <section className="photo-list__item">
-      <PhotoFavButton className="photo-list__fav-icon"  />
+      <PhotoFavButton favouritePhotos={props.favouritePhotos} setFavouritePhotos={props.setFavouritePhotos} id={props.photo.id} className="photo-list__fav-icon"  />
       <img className="photo-list__image" src={props.photo.urls.regular} alt="Photo" />
       <div className="photo-list__user-details">
         <img className="photo-list__user-profile" src={props.photo.user.profile} alt="Profile" />

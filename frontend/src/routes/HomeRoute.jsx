@@ -8,7 +8,7 @@ const HomeRoute = (props) => {
     <div className="home-route">
       <TopNavigationBar topics={props.topics} />
       
-      <PhotoList photos={props.photos}/>
+      <PhotoList photos={props.photos} favouritePhotos={props.favouritePhotos} setFavouritePhotos={props.setFavouritePhotos} />
     </div>
   );
 };
