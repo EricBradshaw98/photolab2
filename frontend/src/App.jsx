@@ -9,32 +9,31 @@ import PhotoDetailsModal from './routes/PhotoDetailsModal';
 const App = () => {
   
 const [favouritePhotos, setFavouritePhotos] = useState([])
-const [modal, setModal] = useState(false);
+const [modalPhoto, setModalPhoto] = useState(null);
 
 
-const toggleModal = () => {
-  setModal(!modal);
+const closeModalPhoto = () => {
+  setModalPhoto(null);
 };
   
   return (
     <div className="App">
       
-      == {favouritePhotos.length}
+      
       <HomeRoute 
       topics={topics} 
       photos={photos} 
       favouritePhotos={favouritePhotos} 
       setFavouritePhotos={setFavouritePhotos}
-      setModal={setModal}
-      modal={setModal}
+      setModalPhoto={setModalPhoto}
+      
        />
         
         
-      {modal && <PhotoDetailsModal setModal={setModal}
-      modal={modal} />}
+      {modalPhoto && <PhotoDetailsModal modalPhoto={modalPhoto} closeModalPhoto={closeModalPhoto} />}
       
       
-      <button onClick={toggleModal}>Toggle Modal</button>
+      
       
     </div>
   );
