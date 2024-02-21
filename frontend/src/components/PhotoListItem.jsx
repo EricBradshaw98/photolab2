@@ -3,6 +3,7 @@ import "../styles/PhotoFavButton.scss";
 import "../styles/PhotoListItem.scss";
 import PhotoFavButton from './PhotoFavButton';
 import FavIcon from './FavIcon';
+import "../styles/TopicList.scss";
 
 
 const PhotoListItem = (props) => {
