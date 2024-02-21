@@ -8,7 +8,7 @@ function PhotoFavButton() {
   const [favorited, setFavorited] = useState(false);
 
   const toggleFavorite = () => {
-    setFavorited(!favorited);
+    setFavorited(prevFavorited => !prevFavorited);
   };
 
 
