@@ -1,32 +1,18 @@
 import React from 'react';
-import TopicListItem from './components/TopicListItem';
-import PhotoListItem from './components/PhotoListItem';
-import PhotoList from './components/PhotoList';
-import TopicList from './components/TopicList';
-import TopNavigationBar from './components/TopNavigationBar';
+import topics from './mocks/topics';
+import photos from './mocks/photos';
 import HomeRoute from './routes/HomeRoute';
 import './App.scss';
 
-// const sampleDataForPhotoListItem = {
-//   id: "1",
-//   location: {
-//     city: "Montreal",
-//     country: "Canada",
-//   },
-//   imageSource: `${process.env.PUBLIC_URL}/Image-1-Regular.jpeg`,
-//   username: "Joe Example",
-//   profile: `${process.env.PUBLIC_URL}/profile-1.jpg`,
-// };
 
-
-
-//const photosData = [sampleDataForPhotoListItem, sampleDataForPhotoListItem, sampleDataForPhotoListItem];
-
-// Note: Rendering a single component to build components in isolation
 const App = () => {
+
+   
+
+  
   return (
     <div className="App">
-      <HomeRoute />
+      <HomeRoute topics={topics} photos={photos} />
         
       
     </div>

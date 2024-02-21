@@ -75,7 +75,7 @@ const sampleDataForPhotoList = [
 
 
 const PhotoList = (props) => {
-  const photoItems = sampleDataForPhotoList.map((photo) => (
+  const photoItems = props.photos.map((photo) => (
     <PhotoListItem
       key={photo.id}
       photo={photo}
