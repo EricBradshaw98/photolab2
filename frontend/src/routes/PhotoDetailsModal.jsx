@@ -23,7 +23,7 @@ const PhotoDetailsModal = (props) => {
 
       <section >
       <div className="photo-details-modal__image-container">
-  <PhotoFavButton favouritePhotos={props.favouritePhotos} setFavouritePhotos={props.setFavouritePhotos} id={modalPhoto.id} className="photo-details__fav-icon" />
+  <PhotoFavButton favouritePhotos={props.favouritePhotos} setFavouritePhotos={props.setFavouritePhotos} id={modalPhoto.id} className="photo-list__fav-icon" />
   <img className="photo-details-modal__image" src={modalPhoto.urls.regular} alt="Photo" />
 </div>
       <div className="photo-details-modal__photographer-details">

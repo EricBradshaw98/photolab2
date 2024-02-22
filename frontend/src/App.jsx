@@ -5,40 +5,32 @@ import HomeRoute from './routes/HomeRoute';
 import './App.scss';
 import { useState, useReducer } from "react";
 import PhotoDetailsModal from './routes/PhotoDetailsModal';
+import useApplicationData from './hooks/useApplicationData';
 
 const App = () => {
-  
-const [favouritePhotos, setFavouritePhotos] = useState([])
-const [modalPhoto, setModalPhoto] = useState(null);
+  const { state, setFavouritePhotos, setModalPhoto, closeModalPhoto } = useApplicationData();
 
-
-const closeModalPhoto = () => {
-  setModalPhoto(null);
-};
-  
   return (
     <div className="App">
-      
-      
       <HomeRoute 
-      topics={topics} 
-      photos={photos} 
-      favouritePhotos={favouritePhotos} 
-      setFavouritePhotos={setFavouritePhotos}
-      setModalPhoto={setModalPhoto}
-      modalPhoto={modalPhoto}
+        topics={topics} 
+        photos={photos} 
+        favouritePhotos={state.favouritePhotos} 
+        setFavouritePhotos={setFavouritePhotos}
+        setModalPhoto={setModalPhoto}
+        modalPhoto={state.modalPhoto}
+      />
       
-       />
-        
-        
-      {modalPhoto && <PhotoDetailsModal modalPhoto={modalPhoto} closeModalPhoto={closeModalPhoto} favouritePhotos={favouritePhotos} setFavouritePhotos={setFavouritePhotos} topics={topics} similarPhotos={modalPhoto.similar_photos}
-      photos={photos} 
-      setModalPhoto={setModalPhoto}
+      {state.modalPhoto && <PhotoDetailsModal 
+        modalPhoto={state.modalPhoto} 
+        closeModalPhoto={closeModalPhoto} 
+        favouritePhotos={state.favouritePhotos} 
+        setFavouritePhotos={setFavouritePhotos} 
+        topics={topics} 
+        similarPhotos={state.modalPhoto.similar_photos}
+        photos={photos} 
+        setModalPhoto={setModalPhoto}
       />}
-      
-      
-      
-      
     </div>
   );
 };
