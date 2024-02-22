@@ -30,7 +30,7 @@ const closeModalPhoto = () => {
        />
         
         
-      {modalPhoto && <PhotoDetailsModal modalPhoto={modalPhoto} closeModalPhoto={closeModalPhoto} />}
+      {modalPhoto && <PhotoDetailsModal modalPhoto={modalPhoto} closeModalPhoto={closeModalPhoto} favouritePhotos={favouritePhotos} setFavouritePhotos={setFavouritePhotos}/>}
       
       
       

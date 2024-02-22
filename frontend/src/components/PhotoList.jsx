@@ -82,6 +82,8 @@ const PhotoList = (props) => {
       favouritePhotos={props.favouritePhotos} 
       setFavouritePhotos={props.setFavouritePhotos}
       setModalPhoto={props.setModalPhoto}
+      similarPhotos={props.similarPhotos}
+      
     />
   ));
 
