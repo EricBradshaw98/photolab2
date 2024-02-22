@@ -16,9 +16,10 @@ console.log(props)
       <img onClick={() =>props.setModalPhoto(props.photo)} className="photo-list__image" src={props.photo.urls.regular} alt="Photo" />
       <div className="photo-list__user-details">
         <img className="photo-list__user-profile" src={props.photo.user.profile} alt="Profile" />
+        <div className="locationandinfo">
         <h1 className="photo-list__user-info">{props.photo.user.name}</h1>
         <h2 className="photo-list__user-location">{`${props.photo.location.city}, ${props.photo.location.country}`}</h2>
-        
+        </div>
       </div>
     </section>
   )

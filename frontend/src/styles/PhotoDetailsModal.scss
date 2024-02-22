@@ -8,7 +8,7 @@
   height: 80%;
   width: 55%;
   overflow-y: scroll;
-  border-radius: 12px;
+  
 }
 
 .photo-details-modal__close-button {
@@ -30,8 +30,10 @@
 }
 
 .photo-details-modal__image {
-  max-width: 95%;
+  max-width: 85%;
   border-radius: 8px;
+  margin: 0 auto;
+  display: block;
 }
 
 .photo-details-modal__top-bar {
@@ -45,7 +47,7 @@
 
 .photo-details-modal__photographer-details {
   display: flex;
-  font-size: 16px;
+  
 }
 
 .photo-details-modal__header {
@@ -59,19 +61,50 @@
 
 .photo-details-modal__photographer-location {
   color: #838383;
+  font-size: 24px;
 }
 .photo-details-modal__photographer-profile {
   object-fit: cover;
   border-radius: 100%;
   vertical-align: middle;
-  margin-right: 8px;
-  width: 40px;
-  height: 40px;
+  margin-right: 5px;
+  width: 80px;
+  height: 80px;
+  margin-left: 70px;
+  margin-bottom: 10px;
 }
 
 .photo-details-modal__photographer-info {
-  margin-top: 5px;
+  margin-top: 10px;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 24px;
   margin-left: 8px;
+  margin-bottom: 4px;
+}
+
+.photo-details-modal__hr {
+ width: 90%
+}
+
+.photo-details-modal__image-container {
+  position: relative;
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
+  overflow: hidden; /* Ensure the icon doesn't overflow */
+}
+
+.photo-details__fav-icon {
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position as needed */
+  z-index: 1; /* Ensure the icon is above the image */
+
+}
+
+.locationandinfos{
+margin-left: 10px;
+flex-direction: column;
+
 }

@@ -33,7 +33,6 @@ const closeModalPhoto = () => {
         
       {modalPhoto && <PhotoDetailsModal modalPhoto={modalPhoto} closeModalPhoto={closeModalPhoto} favouritePhotos={favouritePhotos} setFavouritePhotos={setFavouritePhotos} topics={topics} similarPhotos={modalPhoto.similar_photos}
       photos={photos} 
-      
       setModalPhoto={setModalPhoto}
       />}
       
