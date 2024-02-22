@@ -26,11 +26,16 @@ const closeModalPhoto = () => {
       favouritePhotos={favouritePhotos} 
       setFavouritePhotos={setFavouritePhotos}
       setModalPhoto={setModalPhoto}
+      modalPhoto={modalPhoto}
       
        />
         
         
-      {modalPhoto && <PhotoDetailsModal modalPhoto={modalPhoto} closeModalPhoto={closeModalPhoto} favouritePhotos={favouritePhotos} setFavouritePhotos={setFavouritePhotos}/>}
+      {modalPhoto && <PhotoDetailsModal modalPhoto={modalPhoto} closeModalPhoto={closeModalPhoto} favouritePhotos={favouritePhotos} setFavouritePhotos={setFavouritePhotos} topics={topics} 
+      photos={photos} 
+      
+      setModalPhoto={setModalPhoto}
+      />}
       
       
       

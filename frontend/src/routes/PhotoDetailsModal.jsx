@@ -1,5 +1,6 @@
 import React from 'react';
 import PhotoList from '../components/PhotoList';
+
 import PhotoFavButton from '../components/PhotoFavButton';
 import '../styles/PhotoDetailsModal.scss'
 import closeSymbol from '../assets/closeSymbol.svg';
@@ -15,8 +16,8 @@ const PhotoDetailsModal = (props) => {
   return (
     <div className="photo-details-modal">
       
-      <button className="photo-details-modal__close-button">
-        <img onClick={closeModalPhoto} src={closeSymbol} alt="close symbol" />
+      <button onClick={closeModalPhoto} className="photo-details-modal__close-button">
+        <img  src={closeSymbol} alt="close symbol" />
         
       </button>
 
@@ -31,7 +32,7 @@ const PhotoDetailsModal = (props) => {
       </div>
     </section>
 
-
+    <PhotoList photos={props.photos} favouritePhotos={props.favouritePhotos} setFavouritePhotos={props.setFavouritePhotos} setModalPhoto={props.setModalPhoto} similarPhotos={props.similarPhotos}  />
 
       <h1>{modalPhoto.similar_photos.photo2.urls.regular}</h1>
       <img  className="photo-details-modal__image" src={modalPhoto.urls.regular} alt="Photo" />
