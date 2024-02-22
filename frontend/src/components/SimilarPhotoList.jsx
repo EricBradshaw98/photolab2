@@ -75,16 +75,15 @@ const sampleDataForPhotoList = [
 
 
 const SimilarPhotoList = (props) => {
-  const { similarPhotos } = props;
-  const photoItems = similarPhotos.map((photo) => (
+  // Convert object values to an array and then map over it
+  const photoItems = Object.values(props.similarPhotos).map((photo) => (
     <PhotoListItem
       key={photo.id}
       photo={photo}
       favouritePhotos={props.favouritePhotos} 
       setFavouritePhotos={props.setFavouritePhotos}
       setModalPhoto={props.setModalPhoto}
-      similarPhotos={props.similarPhotos}
-      
+      similarPhotos={props.similar_photos} // Note: This prop seems unused in PhotoListItem. Double-check if needed.
     />
   ));
 
