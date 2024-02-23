@@ -7,7 +7,7 @@ import "../styles/TopicListItem.scss";
 const TopicListItem = (props) => {
   return (
     <div className="topic-list__item">
-      <span onClick={() =>props.setTopic(props.topic)} className="topic-list__item">{props.topic.title}</span>
+      <span onClick={() =>props.fetchPhotosByTopic(props.topic.id)} className="topic-list__item">{props.topic.title}</span>
     </div>
   );
 };
