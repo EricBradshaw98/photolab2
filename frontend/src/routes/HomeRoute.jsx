@@ -6,7 +6,7 @@ import '../styles/HomeRoute.scss';
 const HomeRoute = (props) => {
   return (
     <div className="home-route">
-      <TopNavigationBar topics={props.topics} favouritePhotos={props.favouritePhotos} setFavouritePhotos={props.setFavouritePhotos} />
+      <TopNavigationBar topics={props.topics} favouritePhotos={props.favouritePhotos} setFavouritePhotos={props.setFavouritePhotos} setTopic={props.setTopic} />
       
       <PhotoList photos={props.photos} favouritePhotos={props.favouritePhotos} setFavouritePhotos={props.setFavouritePhotos} setModalPhoto={props.setModalPhoto} similarPhotos={props.similarPhotos}  />
     </div>

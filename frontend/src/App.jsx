@@ -6,8 +6,8 @@ import PhotoDetailsModal from './routes/PhotoDetailsModal';
 import useApplicationData from './hooks/useApplicationData';
 
 const App = () => {
-  const { state, setFavouritePhotos, setModalPhoto, closeModalPhoto } = useApplicationData();
-
+  const { state, setFavouritePhotos, setModalPhoto, closeModalPhoto, setTopic   } = useApplicationData();
+  console.log(setTopic);
   return (
     <div className="App">
       <HomeRoute 
@@ -17,6 +17,7 @@ const App = () => {
         setFavouritePhotos={setFavouritePhotos}
         setModalPhoto={setModalPhoto}
         modalPhoto={state.modalPhoto}
+        setTopic={setTopic}
       />
       
       {state.modalPhoto && <PhotoDetailsModal 

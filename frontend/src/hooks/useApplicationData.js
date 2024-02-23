@@ -67,12 +67,32 @@ const useApplicationData = () => {
       });
   }, []);
 
+  const fetchPhotosByTopic = (topicId) => {
+    fetch(`http://localhost:8001/api/topics/photos/${topicId}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        dispatch({ type: ACTIONS.SET_PHOTO_DATA, payload: data });
+      })
+      .catch((error) => {
+        console.error("Error fetching photos by topic:", error);
+      });
+  };
+
   const setFavouritePhotos = (photos) => {
     dispatch({ type: ACTIONS.SET_FAVOURITE_PHOTOS, payload: photos });
   };
 
   const setModalPhoto = (photo) => {
     dispatch({ type: ACTIONS.SET_MODAL_PHOTO, payload: photo });
+  };
+
+  const setTopic = (topic) => {
+    dispatch({ type: ACTIONS.SET_TOPIC_DATA, payload: topic });
   };
 
   const closeModalPhoto = () => {
@@ -83,7 +103,9 @@ const useApplicationData = () => {
     state,
     setFavouritePhotos,
     setModalPhoto,
-    closeModalPhoto
+    closeModalPhoto,
+    fetchPhotosByTopic,
+    setTopic
   };
 };
 

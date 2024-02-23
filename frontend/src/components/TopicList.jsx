@@ -9,6 +9,8 @@ const TopicList = (props) => {
   <TopicListItem
       key={topic.id}
       topic={topic}
+      setTopic={props.setTopic}
+      
     />
 
 
