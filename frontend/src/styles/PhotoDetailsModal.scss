@@ -30,10 +30,12 @@
 }
 
 .photo-details-modal__image {
-  max-width: 85%;
+  max-width: 100%;
   border-radius: 8px;
   margin: 0 auto;
   display: block;
+  size-adjust: 200%;
+  
 }
 
 .photo-details-modal__top-bar {
@@ -88,23 +90,22 @@
 
 .photo-details-modal__image-container {
   position: relative;
-  max-width: 100%;
-  border-radius: 8px;
-  margin: 0 auto;
-  display: block;
-  overflow: hidden; /* Ensure the icon doesn't overflow */
 }
 
 .photo-details__fav-icon {
-  position: absolute;
-  top: 10px; /* Adjust the top position as needed */
-  left: 10px; /* Adjust the left position as needed */
-  z-index: 1; /* Ensure the icon is above the image */
-
+  
+  width: 200px;
+ height: 200px;
+margin-top: 500px;
 }
 
 .locationandinfos{
 margin-left: 10px;
 flex-direction: column;
 
+}
+
+.photo-details-modal__title {
+
+  margin-left: 100px;
 }

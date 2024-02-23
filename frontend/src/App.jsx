@@ -1,9 +1,7 @@
 import React from 'react';
-import topics from './mocks/topics';
-import photos from './mocks/photos';
 import HomeRoute from './routes/HomeRoute';
 import './App.scss';
-import { useState, useReducer } from "react";
+
 import PhotoDetailsModal from './routes/PhotoDetailsModal';
 import useApplicationData from './hooks/useApplicationData';
 
@@ -13,8 +11,8 @@ const App = () => {
   return (
     <div className="App">
       <HomeRoute 
-        topics={topics} 
-        photos={photos} 
+        topics={state.topicData} 
+        photos={state.photoData} 
         favouritePhotos={state.favouritePhotos} 
         setFavouritePhotos={setFavouritePhotos}
         setModalPhoto={setModalPhoto}
@@ -26,9 +24,9 @@ const App = () => {
         closeModalPhoto={closeModalPhoto} 
         favouritePhotos={state.favouritePhotos} 
         setFavouritePhotos={setFavouritePhotos} 
-        topics={topics} 
+        topics={state.topicData} 
         similarPhotos={state.modalPhoto.similar_photos}
-        photos={photos} 
+        photos={state.photoData} 
         setModalPhoto={setModalPhoto}
       />}
     </div>
