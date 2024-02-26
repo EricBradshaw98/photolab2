@@ -14,38 +14,53 @@
   width: 400px;
   height: 300px;
   object-fit: cover;
+  border-color: rgb(255, 255, 255);
 }
 
 .photo-list__user-profile {
+  display: flex;
   object-fit: cover;
   border-radius: 100%;
-  vertical-align: middle;
+  
   margin-right: 8px;
   width: 40px;
   height: 40px;
+  
+  margin-left: auto ;
+ 
 }
 
 .photo-list__user-details {
   display: flex;
-   
+  justify-content: end;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 .locationandinfo {
- flex-direction: column;
- margin-right: auto ;
+  display: flex;
+ flex-direction: row;
+ align-items: center;
+ 
+ justify-content: space-between;
+ 
 }
 
 .photo-list__user-info {
-  margin-top: 2px;
+ 
   font-weight: 700;
   
-  margin-bottom: 2px;
+  align-items: center;
    
 }
 
 .photo-list__user-location {
   color: #838383;
+  margin-right: 20px ;
   
-  margin-top: 2px;
+}
+
+.photo-list__user-info{
+  
 }

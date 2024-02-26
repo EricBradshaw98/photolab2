@@ -14,12 +14,12 @@ console.log(props)
     <section className="photo-list__item">
       <PhotoFavButton favouritePhotos={props.favouritePhotos} setFavouritePhotos={props.setFavouritePhotos} id={props.photo.id} className="photo-list__fav-icon"  />
       <img onClick={() =>props.setModalPhoto(props.photo)} className="photo-list__image" src={props.photo.urls.regular} alt="Photo" />
-      <div className="photo-list__user-details">
+      <div className="photo-list__user-details"><div className="locationandinfo">
         <img className="photo-list__user-profile" src={props.photo.user.profile} alt="Profile" />
-        <div className="locationandinfo">
-        <h1 className="photo-list__user-info">{props.photo.user.name}</h1>
+        
+        <h1 className="photo-list__user-info">{props.photo.user.name}</h1></div><hr className='photo-details-modal__hr'></hr>
         <h2 className="photo-list__user-location">{`${props.photo.location.city}, ${props.photo.location.country}`}</h2>
-        </div>
+        
       </div>
     </section>
   )

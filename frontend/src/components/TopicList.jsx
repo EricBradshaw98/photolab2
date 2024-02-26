@@ -10,13 +10,14 @@ const TopicList = (props) => {
       key={topic.id}
       topic={topic}
       fetchPhotosByTopic={props.fetchPhotosByTopic}
+      darkMode={props.darkMode}
       
     />
 
 
   )
   return (
-    <div className="top-nav-bar__topic-list">
+    <div className={`top-nav-bar__topic-list${props.darkMode ? 'dark-mode-top-nav-bar' : ''}`}>
       {topicItems}
     </div>
   );

@@ -14,17 +14,18 @@ const PhotoDetailsModal = (props) => {
 
 
   return (
-    <div className="photo-details-modal">
+    <div className={`photo-details-modal${props.darkMode ? 'dark-mode' : ''}`}>
       
-      <button onClick={closeModalPhoto} className="photo-details-modal__close-button">
+      <button onClick={closeModalPhoto} className={`photo-details-modal__close-button${props.darkMode ? 'dark-mode' : ''}`}>
         <img  src={closeSymbol} alt="close symbol" />
         
       </button>
 
       <section >
       <div className="photo-details-modal__image-container">
-  <PhotoFavButton className="photo-details__fav-icon" favouritePhotos={props.favouritePhotos} setFavouritePhotos={props.setFavouritePhotos} id={modalPhoto.id}  />
+  <div className="photo-details-modal__button"><PhotoFavButton  favouritePhotos={props.favouritePhotos} setFavouritePhotos={props.setFavouritePhotos} id={modalPhoto.id}  /></div>
   <img className="photo-details-modal__image" src={modalPhoto.urls.regular} alt="Photo" />
+  <hr className='photo-details-modal__hrr'></hr>
 </div>
       <div className="photo-details-modal__photographer-details">
         <img className="photo-details-modal__photographer-profile" src={modalPhoto.user.profile} alt="Profile" />
@@ -34,7 +35,7 @@ const PhotoDetailsModal = (props) => {
         </div>
       </div>
     </section>
-    <hr className='photo-details-modal__hr'></hr>
+    <hr className='photo-details-modal__hrr'></hr>
     <h1 className='photo-details-modal__title'>Related Photos </h1>
 <div className= "photo-details-modal__images">
     <PhotoList  favouritePhotos={props.favouritePhotos} setFavouritePhotos={props.setFavouritePhotos} setModalPhoto={props.setModalPhoto} photos={Object.values(modalPhoto.similar_photos)} modalPhoto={modalPhoto} />

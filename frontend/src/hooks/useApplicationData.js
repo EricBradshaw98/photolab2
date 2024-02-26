@@ -34,6 +34,7 @@ const reducer = (state, action) => {
 
 const useApplicationData = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [darkMode, setDarkMode] = useState(false); // State for dark mod
 
   useEffect(() => {
     fetch("http://localhost:8001/api/photos")
@@ -105,7 +106,9 @@ const useApplicationData = () => {
     setModalPhoto,
     closeModalPhoto,
     fetchPhotosByTopic,
-    setTopic
+    setTopic,
+    darkMode,
+    setDarkMode
   };
 };
 

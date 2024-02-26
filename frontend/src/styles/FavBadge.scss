@@ -1,11 +1,13 @@
 .fav-badge {
   position: relative;
+  width: 40px;
+height: 40px;
 }
 
 .fav-badge__count { 
 background-color: rgb(0, 0, 0);
-width: 20px;
-height: 20px;
+width: 40px;
+height: 40px;
   border-radius: 99px;
   position: absolute;
   top: 0%;
