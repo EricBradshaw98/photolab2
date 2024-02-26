@@ -8,7 +8,7 @@ import "../styles/TopicList.scss";
 
 const PhotoListItem = (props) => {
 
-console.log(props)
+
 
   return (
     <section className="photo-list__item">

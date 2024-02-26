@@ -8,7 +8,7 @@ import closeSymbol from '../assets/closeSymbol.svg';
 const PhotoDetailsModal = (props) => {
   const {closeModalPhoto, modalPhoto} = props
 
-  console.log(modalPhoto.similar_photos);
+ 
 
 
 
@@ -24,7 +24,7 @@ const PhotoDetailsModal = (props) => {
       <section >
       <div className="photo-details-modal__image-container">
   <div className="photo-details-modal__button"><PhotoFavButton  favouritePhotos={props.favouritePhotos} setFavouritePhotos={props.setFavouritePhotos} id={modalPhoto.id}  /></div>
-  <img className="photo-details-modal__image" src={modalPhoto.urls.regular} alt="Photo" />
+  <img  className="photo-details-modal__image" src={modalPhoto.urls.regular} alt="Photo" />
   <hr className='photo-details-modal__hrr'></hr>
 </div>
       <div className="photo-details-modal__photographer-details">

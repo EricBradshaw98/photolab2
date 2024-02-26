@@ -4,7 +4,8 @@ const initialState = {
   favouritePhotos: [],
   modalPhoto: null,
   photoData: [],
-  topicData: []
+  topicData: [],
+  darkMode: false
 };
 
 const ACTIONS = {
@@ -12,7 +13,9 @@ const ACTIONS = {
   SET_MODAL_PHOTO: "SET_MODAL_PHOTO",
   SET_PHOTO_DATA: "SET_PHOTO_DATA",
   SET_TOPIC_DATA: "SET_TOPIC_DATA",
-  CLOSE_MODAL_PHOTO: "CLOSE_MODAL_PHOTO"
+  CLOSE_MODAL_PHOTO: "CLOSE_MODAL_PHOTO",
+  TOGGLE_DARK_MODE: "TOGGLE_DARK_MODE"
+
 };
 
 const reducer = (state, action) => {
@@ -23,10 +26,12 @@ const reducer = (state, action) => {
       return { ...state, modalPhoto: action.payload };
     case ACTIONS.SET_PHOTO_DATA:
       return { ...state, photoData: action.payload };
-      case ACTIONS.SET_TOPIC_DATA:
+    case ACTIONS.SET_TOPIC_DATA:
       return { ...state, topicData: action.payload };
     case ACTIONS.CLOSE_MODAL_PHOTO:
       return { ...state, modalPhoto: null };
+    case ACTIONS.TOGGLE_DARK_MODE:
+      return { ...state, darkMode: !state.darkMode };
     default:
       return state;
   }
@@ -34,7 +39,7 @@ const reducer = (state, action) => {
 
 const useApplicationData = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const [darkMode, setDarkMode] = useState(false); // State for dark mod
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:8001/api/photos")
@@ -100,6 +105,11 @@ const useApplicationData = () => {
     dispatch({ type: ACTIONS.CLOSE_MODAL_PHOTO });
   };
 
+  const toggleDarkMode = () => {
+    // Action creator for toggling dark mode
+    dispatch({ type: ACTIONS.TOGGLE_DARK_MODE });
+  };
+
   return {
     state,
     setFavouritePhotos,
@@ -108,7 +118,8 @@ const useApplicationData = () => {
     fetchPhotosByTopic,
     setTopic,
     darkMode,
-    setDarkMode
+    setDarkMode,
+    toggleDarkMode
   };
 };
 
