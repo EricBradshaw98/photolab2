@@ -26,6 +26,6 @@ npm start
 
 
 
-!["Screenshot main page"](https://github.com/lighthouse-labs/photolab2/blob/master/docs/screenshot1.png)
+!["Screenshot main page"](https://github.com/EricBradshaw98/photolab2/blob/main/docs/screenshot1.png?raw=true)
 !["Screenshot modal page"](https://github.com/lighthouse-labs/photolab2/blob/master/docs/screenshot2.png)
 !["Screenshot main page sorted"](https://github.com/lighthouse-labs/photolab2/blob/master/docs/screenshot3.png)
